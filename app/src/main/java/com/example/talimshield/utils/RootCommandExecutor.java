@@ -2,13 +2,11 @@ package com.example.talimshield.utils;
 
 import android.util.Log;
 import java.io.DataOutputStream;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
 
 /**
  * Root command execute করার জন্য utility class
- * Proper root permission request সহ
+ * মায়ের Messenger protection সিস্টেম
  */
 public class RootCommandExecutor {
 
@@ -41,8 +39,6 @@ public class RootCommandExecutor {
 
     /**
      * Root shell এ command execute করে
-     * @param command যে command run করতে হবে
-     * @return সফল হলে true
      */
     public static boolean executeRootCommand(String command) {
         try {
@@ -61,7 +57,6 @@ public class RootCommandExecutor {
 
         } catch (IOException e) {
             Log.e(TAG, "Error executing command: " + command, e);
-            // Shell restart করার চেষ্টা করি
             closeRootShell();
             return false;
         }
@@ -73,7 +68,6 @@ public class RootCommandExecutor {
     public static void blockMessengerCamera() {
         Log.d(TAG, "Blocking Messenger camera");
         executeRootCommand("cmd appops set com.facebook.orca CAMERA ignore");
-        executeRootCommand("cmd appops set com.facebook.orca CAMERA 3"); // DENY mode
     }
 
     /**
@@ -82,7 +76,6 @@ public class RootCommandExecutor {
     public static void blockMessengerMic() {
         Log.d(TAG, "Blocking Messenger mic");
         executeRootCommand("cmd appops set com.facebook.orca RECORD_AUDIO ignore");
-        executeRootCommand("cmd appops set com.facebook.orca RECORD_AUDIO 3"); // DENY mode
     }
 
     /**
@@ -91,7 +84,6 @@ public class RootCommandExecutor {
     public static void unblockMessengerCamera() {
         Log.d(TAG, "Unblocking Messenger camera");
         executeRootCommand("cmd appops set com.facebook.orca CAMERA allow");
-        executeRootCommand("cmd appops set com.facebook.orca CAMERA 0"); // ALLOW mode
     }
 
     /**
@@ -100,7 +92,6 @@ public class RootCommandExecutor {
     public static void unblockMessengerMic() {
         Log.d(TAG, "Unblocking Messenger mic");
         executeRootCommand("cmd appops set com.facebook.orca RECORD_AUDIO allow");
-        executeRootCommand("cmd appops set com.facebook.orca RECORD_AUDIO 0"); // ALLOW mode
     }
 
     /**
