@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
         if (isChecked) {
             // ব্লক করি
             String result = RootCommandExecutor.blockMessengerCamera();
-            updateStatus("📷 ক্যামেরা ব্লক করা হয়েছে");
-            showToast("মেসেঞ্জার ক্যামেরা ব্লক হয়েছে");
+            updateStatus("📷 ক্যামেরা বন্ধ করা হয়েছে");
+            showToast("মেসেঞ্জারের ক্যামেরা বন্ধ হয়েছে");
         } else {
             // আনব্লক করি
             String result = RootCommandExecutor.unblockMessengerCamera();
-            updateStatus("📷 ক্যামেরা সক্রিয় করা হয়েছে");
-            showToast("মেসেঞ্জার ক্যামেরা সক্রিয় হয়েছে");
+            updateStatus("📷 ক্যামেরা চালু করা হয়েছে");
+            showToast("মেসেঞ্জারের ক্যামেরা চালু হয়েছে");
         }
     }
 
@@ -78,13 +78,13 @@ public class MainActivity extends AppCompatActivity {
         if (isChecked) {
             // ব্লক করি
             String result = RootCommandExecutor.blockMessengerMic();
-            updateStatus("🎤 মাইক্রোফোন ব্লক করা হয়েছে");
-            showToast("মেসেঞ্জার মাইক ব্লক হয়েছে");
+            updateStatus("🎤 মাইক বন্ধ করা হয়েছে");
+            showToast("মেসেঞ্জারের মাইক বন্ধ হয়েছে");
         } else {
             // আনব্লক করি
             String result = RootCommandExecutor.unblockMessengerMic();
-            updateStatus("🎤 মাইক্রোফোন সক্রিয় করা হয়েছে");
-            showToast("মেসেঞ্জার মাইক সক্রিয় হয়েছে");
+            updateStatus("🎤 মাইক চালু করা হয়েছে");
+            showToast("মেসেঞ্জারের মাইক চালু হয়েছে");
         }
     }
 
