@@ -15,7 +15,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="মায়ের সুরক্ষা অ্যাপ"
+        android:label="মাইক ও ক্যামেরা"
         android:supportsRtl="true"
         android:theme="@style/Theme.TalimShield">
         
