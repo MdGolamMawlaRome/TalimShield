@@ -3,62 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="20dp"
     android:background="@color/white">
 
-    <!-- Title -->
+    <!-- Title - App Name -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="মাইক ও ক্যামেরা"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="#000000"
         android:gravity="center"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginBottom="60dp" />
 
-    <!-- Root Status -->
-    <TextView
-        android:id="@+id/rootStatusText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="✅ Root Access: চেক করা হচ্ছে..."
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20dp"
-        android:padding="10dp"
-        android:background="#F0F0F0" />
-
-    <!-- Status Display -->
-    <TextView
-        android:id="@+id/statusText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="অবস্থা: সবকিছু প্রস্তুত"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="40dp"
-        android:padding="10dp"
-        android:background="#E8F5E9" />
-
-    <!-- Camera Block Section -->
+    <!-- Camera Toggle -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="30dp"
-        android:padding="15dp"
-        android:background="#FFEBEE">
+        android:padding="20dp"
+        android:layout_marginBottom="30dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="📷 মেসেঞ্জার ক্যামেরা ব্লক"
-            android:textSize="18sp"
+            android:text="📷 মেসেঞ্জার ক্যামেরা"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:textColor="#000000" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/camSwitch"
@@ -66,56 +42,27 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <!-- Mic Block Section -->
+    <!-- Mic Toggle -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="30dp"
-        android:padding="15dp"
-        android:background="#FFF3E0">
+        android:padding="20dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="🎤 মেসেঞ্জার মাইক ব্লক"
-            android:textSize="18sp"
+            android:text="🎤 মেসেঞ্জার মাইক"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:textColor="#000000" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/micSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <!-- Information Section -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:background="#E3F2FD"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ℹ️ তথ্য:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginBottom="10dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="• এই অ্যাপ আপনার মা কে তালিম নিতে যেতে সাহায্য করে\n• মেসেঞ্জার ক্যামেরা এবং মাইক ব্লক করে\n• মা নিরাপদে পড়াশোনা করতে পারে"
-            android:textSize="14sp"
-            android:textColor="@color/black"
-            android:lineSpacingExtra="5dp" />
     </LinearLayout>
 
 </LinearLayout>
