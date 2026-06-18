@@ -2,9 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.talimshield">
 
+    <!-- Root permissions -->
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    
+    <!-- Camera and Mic permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <!-- App ops permission -->
     <uses-permission android:name="android.permission.GET_APP_OPS_STATS" />
 
     <application
