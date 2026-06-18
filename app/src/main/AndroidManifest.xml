@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.talimshield">
+
+    <!-- Root access permission -->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    
+    <!-- Camera এবং Mic permissions monitoring এর জন্য -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <!-- App operations permission check করার জন্য -->
+    <uses-permission android:name="android.permission.GET_APP_OPS_STATS" />
+    
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="মায়ের সুরক্ষা অ্যাপ"
+        android:label="মায়ের সুরক্ষা অ্যাপ"
         android:supportsRtl="true"
         android:theme="@style/Theme.TalimShield">
+        
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -14,5 +27,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- Fake Audio Service -->
+        <service
+            android:name=".services.FakeAudioService"
+            android:exported="false" />
+        
+        <!-- Fake Video Service -->
+        <service
+            android:name=".services.FakeVideoService"
+            android:exported="false" />
+            
     </application>
+
 </manifest>
